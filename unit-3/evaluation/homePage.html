@@ -10,27 +10,56 @@
           border: 1px solid red;
           display: flex;
          justify-content: space-evenly;
+         position: relative;
       }
       #input{
-          width: 40%;
+          width: 90%;
           border: 1px solid red;
       }
       #searchNews{
           width: 90%;
           height: 30px;
       }
+      .searchBox{
+          width: 40%;
+          float: right;
+          border: 1px solid red;
+      }
+    .searchBox #list{
+          position: absolute;
+          width: 30%;
+          overflow-y:scroll;
+          overflow-x: hidden;
+          z-index: 1002;
+          background-color: black;
+          color: white;
+          border: 1px solid red;
+      }
+      #list li{
+          list-style: none;
+          cursor: pointer;
+          padding: 5px;
+          font-size: 15px;
+      }
+      .conatiner{
+          border: 1px solid red;
+      }
     </style>
 </head>
 <body>
     <div id="navBar">
         <div><h3><a href="homePage.html">Home</a></h3></div>
-        <div id="input"><input oninput="throtle()" type="text" id="searchNews"></div>
-        <div id="list"></div>
-        <div id="data"></div>
+    <div class="searchBox">
+        <input oninput="throtle()" type="text" id="searchNews">
+    <div id="list"></div>
     </div>
+
+    </div>
+    <div id="data"></div>
 </body>
 </html>
 <!-- <script type="module">
     import navBar from './component/navBar.js'
     document.body.innerHTML=navBar()
 </script> -->
+<script src="searchNew.js"></script>
