@@ -69,3 +69,6 @@ async function plot(){
     appendSearch(find)
     console.log(find);
 }
+
+
+
