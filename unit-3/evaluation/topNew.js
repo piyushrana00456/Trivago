@@ -1,7 +1,6 @@
 let wrap1=document.getElementById('data')
 let wrap2=document.getElementById('Wrap')
 
-
 async function topNews(){
  
     let res=await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=a0925db0e5364fc5b0def59b931557dd`)
@@ -58,16 +57,3 @@ async function topNews(){
 
 }
 topNews()
-
-function gotoDetail(el){
-    
-
-
-
-  
-}
-
- function main(){
-    let set= topNews()
-    gotoDetail(set) 
- }
